@@ -4,7 +4,7 @@ services:
   web:
     build: .
     #command: python /code/manage.py runserver 0.0.0.0:8000
-    gunicorn portfolio.wsgi -b 0.0.0.0:8000
+    command: gunicorn portfolio.wsgi -b 0.0.0.0:8000
     environment:
       - ENVIRONMENT=production
       - SECRET_KEY=3#6d40ff4*7$$5pm3*tj=^mz2$$=nh$$4vq)#yngqlpi)-hxub!8u
