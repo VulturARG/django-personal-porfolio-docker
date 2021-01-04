@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section id="two" class="wrapper style3 fade-up">
+  <div class="inner">
+    <h2>{{ skill_titles.title }}</h2>
+    <p>{{ skill_titles.description }}</p>
+    <div class="features">
+      {% for skill in skills %}
+      <section>
+        <span class="icon solid major fa-code"></span>
+        <h3>{{ skill.title }}</h3>
+        <p>{{ skill.description }}</p>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

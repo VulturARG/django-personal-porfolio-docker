@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <section id="intro" class="wrapper style1 fullscreen fade-up">
+    <div class="inner">
+      <h1>{{ welcome.title }}</h1>
+      <p>{{ welcome.description }}</p>
+      <ul class="icons">
+        <li>
+          <a
+            href="http://github.com/vulturARG/"
+            target="_blank"
+            class="icon brands fa-github"
+            ><span class="label">GitHub</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/luisbriones/"
+            target="_blank"
+            class="icon brands fa-linkedin-in"
+            ><span class="label">LinkedIn</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </section>
+{% endblock %}

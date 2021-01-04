@@ -1,0 +1,49 @@
+{% extends "base.html" %} 
+{% load static %}
+<script type="text/javascript" src="{% static 'projects/js/llena_datos.js' %}"></script>
+{% block content %}
+  <section id="three" class="wrapper style1 fade-up">
+    <div class="inner">
+      <h2>Ejemplo de uso de Ajax</h2>
+      <p>Dado que por la temática de mi sitio web no existía un lugar donde fuera requerido el uso de esta tecnología cree esta pagina de demostración con la opción de autocompletado</p>
+      <div class="split style1">
+        <section>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field half">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" />
+              </div>
+            </div>
+            <ul class="actions">
+              <li><a href="" class="button submit" id="completar">Completar</a></li>
+            </ul>
+          </form>
+        </section>
+        <section>
+          <div id="datos">
+            <ul class="contact">
+              <li>
+                <h3>Código Postal</h3>
+                <span></span>
+              </li>
+              <li>
+                <h3>Provincia</h3>
+                <span></span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript" >
+    $( "#ciudad" ).autocomplete({
+        source: "/search_city",
+        delay: 300,
+        minLength: 2
+      });
+  </script> 
+
+{% endblock %}
